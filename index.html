@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="message"></div>
+
+    <script>
+        const messageDiv = document.getElementById('message');
+
+        function isMobileDevice() {
+            return /Mobi|Android/i.test(navigator.userAgent);
+        }
+
+        if (isMobileDevice()) {
+            messageDiv.innerHTML = '"The best outcome blooms when we resist the urge to rush."';
+        } else {
+            messageDiv.innerHTML = "<strong><em>Antoine</em></strong> said we should <strong><em>hangout</em></strong>";
+        }
+    </script>
+</body>
+</html>
